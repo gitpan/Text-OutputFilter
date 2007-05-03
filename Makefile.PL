@@ -1,16 +1,32 @@
-use ExtUtils::MakeMaker;
+#!/usr/bin/perl
 
 # Copyright PROCURA B.V. (c) 2006-2007 H.Merijn Brand
 
-use v5.8.0;
+require 5.008;
+use strict;
+
+use ExtUtils::MakeMaker;
 
 my %wm = (
     NAME         => "Text::OutputFilter",
     ABSTRACT     => "Filter and modify output",
     AUTHOR       => "H.Merijn Brand <h.merijn\@procura.nl>",
+    LICENSE	 => "perl",
     VERSION_FROM => "OutputFilter.pm",
     );
 
 my $rv = WriteMakefile (%wm);
 
 1;
+
+package MY;
+
+sub postamble
+{
+    join "\n" =>
+	'cover test_cover:',
+	'	cover -delete',
+	'	HARNESS_PERL_SWITCHES=-MDevel::Cover $(MAKE) test',
+	'	cover',
+	'';
+    } # postamble

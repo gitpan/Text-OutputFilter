@@ -1,5 +1,15 @@
 Revision history for Text::OutputFilter
 
-0.10	Wed 21 Mar 2007
+0.12	Tue 02 May 2007
+
+    - Pod checks were wrong (yank/put problem)
+    - Added test_cover make target
+    - Added Text::Filter to SEE ALSO
+    - Added tests for printf and binmode
+    - Fixed binmode
+    - Added tests for tell, eof, and fileno
+    - Added tests for input (forbidden) and NYI functionality
+
+0.11	Wed 21 Mar 2007
 
     - Initial release to CPAN

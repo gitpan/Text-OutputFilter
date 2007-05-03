@@ -1,6 +1,6 @@
 package Text::OutputFilter;
 
-$Text::OutputFilter::VERSION = 0.11;
+$Text::OutputFilter::VERSION = 0.12;
 
 =head1 NAME
 
@@ -73,7 +73,7 @@ This library is not free software; you can't redistribute it
 
 =head1 SEE ALSO
 
-perl(1), perlopen, 'open STDOUT, "|-"'
+perl(1), perlopen, 'open STDOUT, "|-"', Text::Filter
 
 =cut
 
@@ -102,7 +102,7 @@ sub TIEHANDLE
 	open $fh, ">", $io;
 	}
     else {
-	$fno = fileno $io;
+	eval { $fno = fileno $io };
 	defined $fno && $fno >= 0 or
 	    croak "OutputFilter tie's 2nd arg must be the output handle\n";
 	open $fh, ">&", $fno;
@@ -125,7 +125,13 @@ sub BINMODE
 {
     my $self = shift;
     $self->{closed} and croak "Cannot set binmode on closed filehandle";
-    binmode $self->{io}, @_;
+    if (@_) {
+	my $mode = shift;
+	binmode $self->{io}, $mode;
+	}
+    else {
+	binmode $self->{io};
+	}
     } # BINMODE
 
 sub FILENO
@@ -188,7 +194,7 @@ sub CLOSE
     $line ne "" and print { $io } _Filter_ (0, $pfx, $sub, $line);
     $self->{closed} or close $io;
     $self->{line} = "";
-    $self->{closed}++;
+    $self->{closed} = 1;
     } # CLOSE
 
 sub UNTIE
@@ -233,5 +239,29 @@ sub _NYI ($)
 *SEEK		= _NYI ("SEEK");
 *write		= _NYI ("write");
 *WRITE		= _NYI ("WRITE");
+
+=begin comment
+
+We do not want to document these:
+
+=over 4
+
+=item getc
+
+=item open
+
+=item read
+
+=item readline
+
+=item seek
+
+=item write
+
+=back
+
+=end comment
+
+=cut
 
 1;
