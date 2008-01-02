@@ -1,5 +1,14 @@
 Revision history for Text::OutputFilter
 
+0.13	Wed 02 Jan 2008
+
+    - Spellchecks
+    - Removed prototypes
+    - Now under git
+    - Added simplistic example
+    - Added prereq's to Makefile.PL
+    - Upped copyright year
+
 0.12	Tue 02 May 2007
 
     - Pod checks were wrong (yank/put problem)

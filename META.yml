@@ -1,13 +1,15 @@
 --- #YAML:1.0
 name:                Text-OutputFilter
-version:             0.12
+version:             0.13
 abstract:            Filter and modify output
 license:             perl
-generated_by:        ExtUtils::MakeMaker version 6.32
+author:              
+    - H.Merijn Brand <h.merijn@procura.nl>
+generated_by:        ExtUtils::MakeMaker version 6.42
 distribution_type:   module
 requires:     
+    Carp:                          0
+    Test::More:                    0
 meta-spec:
-    url:     http://module-build.sourceforge.net/META-spec-v1.2.html
-    version: 1.2
-author:
-    - H.Merijn Brand <h.merijn@procura.nl>
+    url:     http://module-build.sourceforge.net/META-spec-v1.3.html
+    version: 1.3

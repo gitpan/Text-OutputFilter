@@ -1,6 +1,9 @@
 package Text::OutputFilter;
 
-$Text::OutputFilter::VERSION = 0.12;
+use strict;
+use warnings;
+
+$Text::OutputFilter::VERSION = 0.13;
 
 =head1 NAME
 
@@ -67,7 +70,7 @@ H.Merijn Brand <h.m.brand@procura.nl>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2007 H.Merijn Brand for PROCURA B.V.
+Copyright (C) 2006-2008 H.Merijn Brand for PROCURA B.V.
 
 This library is not free software; you can't redistribute it
 
@@ -77,8 +80,6 @@ perl(1), perlopen, 'open STDOUT, "|-"', Text::Filter
 
 =cut
 
-use strict;
-use warnings;
 use Carp;
 
 sub TIEHANDLE
@@ -140,7 +141,7 @@ sub FILENO
     fileno $self->{io};
     } # FILENO
 
-sub _Filter_ ($$$$)
+sub _Filter_
 {
     my ($nl, $pfx, $sub, $line) = @_;
     my $l = $sub->($line);
@@ -214,7 +215,7 @@ sub DESTROY
 
 ### ###########################################################################
 
-sub _outputOnly ($)
+sub _outputOnly
 {
     my $name = shift;
     sub { croak "No support for $name method: File is output only" };
@@ -227,7 +228,7 @@ sub _outputOnly ($)
 *getc		= _outputOnly ("getc");
 *GETC		= _outputOnly ("GETC");
 
-sub _NYI ($)
+sub _NYI
 {
     my $name = shift;
     sub { croak "Support for $name method NYI" };

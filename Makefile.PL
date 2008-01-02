@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# Copyright PROCURA B.V. (c) 2006-2007 H.Merijn Brand
+# Copyright PROCURA B.V. (c) 2006-2008 H.Merijn Brand
 
 require 5.008;
 use strict;
@@ -13,6 +13,10 @@ my %wm = (
     AUTHOR       => "H.Merijn Brand <h.merijn\@procura.nl>",
     LICENSE	 => "perl",
     VERSION_FROM => "OutputFilter.pm",
+    PREREQ_PM	 => {
+	"Carp"		=> 0,
+	"Test::More"	=> 0,
+	},
     );
 
 my $rv = WriteMakefile (%wm);

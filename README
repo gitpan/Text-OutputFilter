@@ -2,7 +2,7 @@
 
 Text::OutputFilter - Filter and modify output
 
-=head1 SYNOPSYS
+=head1 SYNOPSIS
 
   use Text::OutputFilter;
 
@@ -23,7 +23,7 @@ See C<perldoc Text::OutputFilter> or C<pod2man OutputFilter.pm | nroff -man>.
 
 =item format
 
-Output from format/write is not cought. This seems to be a bug in
+Output from format/write is not caught. This seems to be a bug in
 perl itself, and is unlikely to be fixed by this module.
 
 =item examples
@@ -38,7 +38,7 @@ H.Merijn Brand <h.m.brand@procura.nl>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2007 H.Merijn Brand for PROCURA B.V.
+Copyright (C) 2006-2008 H.Merijn Brand for PROCURA B.V.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 
