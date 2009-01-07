@@ -1,5 +1,12 @@
 Revision history for Text::OutputFilter
 
+0.14	Wed 07 Jan 2009
+
+    - Copyright 2009
+    - Made the license as in perl. Was still accidentally restricted
+    - Corrected e-mail
+    - Generated and checked META.yml
+
 0.13	Wed 02 Jan 2008
 
     - Spellchecks
