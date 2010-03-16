@@ -3,7 +3,7 @@ package Text::OutputFilter;
 use strict;
 use warnings;
 
-our $VERSION = 0.14;
+our $VERSION = 0.15;
 
 =head1 NAME
 
@@ -70,7 +70,7 @@ H.Merijn Brand <h.m.brand@procura.nl>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2006-2009 H.Merijn Brand for PROCURA B.V.
+Copyright (C) 2006-2010 H.Merijn Brand for PROCURA B.V.
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself. 

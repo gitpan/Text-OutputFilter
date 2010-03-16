@@ -3,7 +3,8 @@
 use strict;
 use warnings;
 
-use Test::More tests => 43;
+use Test::More tests => 44;
+use Test::NoWarnings;
 
 use_ok "Text::OutputFilter";
 

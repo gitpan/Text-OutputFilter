@@ -1,25 +1,31 @@
---- #YAML:1.1
-name:              Text::OutputFilter
-version:           0.14
-abstract:          Filter and modify output
-license:           perl
+--- #YAML:1.0
+name:                    Text::OutputFilter
+version:                 0.15
+abstract:                Filter and modify output
+license:                 perl
 author:              
     - H.Merijn Brand <h.m.brand@xs4all.nl>
-generated_by:      Author
-distribution_type: module
+generated_by:            Author
+distribution_type:       module
 provides:
     Text::OutputFilter:
-        file:      OutputFilter.pm
-        version:   0.14
+        file:            OutputFilter.pm
+        version:         0.15
 requires:     
-    perl:          5.008
-    Carp:          0
+    perl:                5.008
+    Carp:                0
+recommends:     
+    perl:                5.010001
+configure_requires:
+    ExtUtils::MakeMaker: 0
 build_requires:
-    perl:          5.008
-    Test::Harness: 0
-    Test::More:    0
+    perl:                5.008
+    Test::Harness:       0
+    Test::More:          0
+    Test::NoWarnings:    0
 resources:
-    license:       http://dev.perl.org/licenses/
+    license:             http://dev.perl.org/licenses/
+    repository:          http://repo.or.cz/w/Text-OutputFilter.git
 meta-spec:
-    version:       1.4
-    url:           http://module-build.sourceforge.net/META-spec-v1.4.html
+    version:             1.4
+    url:                 http://module-build.sourceforge.net/META-spec-v1.4.html
