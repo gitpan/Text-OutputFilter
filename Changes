@@ -1,5 +1,9 @@
 Revision history for Text::OutputFilter
 
+0.17	Wed 07 Sep 2011
+
+    - NAME / DISTNAME in Makefile.PL
+
 0.16	Wed 07 Sep 2011
 
     - Spell checks

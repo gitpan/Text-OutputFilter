@@ -8,7 +8,8 @@ use strict;
 use ExtUtils::MakeMaker;
 
 my %wm = (
-    NAME         => "Text-OutputFilter",
+    NAME         => "Text::OutputFilter",
+    DISTNAME     => "Text-OutputFilter",
     ABSTRACT     => "Filter and modify output",
     AUTHOR       => "H.Merijn Brand <h.m.brand\@xs4all.nl>",
     LICENSE	 => "perl",

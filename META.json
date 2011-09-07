@@ -14,7 +14,7 @@
       },
    "distribution_type" : "module",
    "generated_by" : "Author",
-   "version" : "0.16",
+   "version" : "0.17",
    "name" : "Text-OutputFilter",
    "author" : [
       "H.Merijn Brand <h.m.brand@xs4all.nl>"
@@ -22,7 +22,7 @@
    "license" : "perl",
    "provides" : {
       "Text::OutputFilter" : {
-         "version" : "0.16",
+         "version" : "0.17",
          "file" : "OutputFilter.pm"
          }
       },

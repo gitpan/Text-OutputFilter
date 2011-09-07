@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                    Text-OutputFilter
-version:                 0.16
+version:                 0.17
 abstract:                Filter and modify output
 license:                 perl
 author:              
@@ -10,7 +10,7 @@ distribution_type:       module
 provides:
     Text::OutputFilter:
         file:            OutputFilter.pm
-        version:         0.16
+        version:         0.17
 requires:     
     perl:                5.008
     Carp:                0
