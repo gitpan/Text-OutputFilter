@@ -1,5 +1,11 @@
 Revision history for Text::OutputFilter
 
+0.16	Wed 07 Sep 2011
+
+    - Spell checks
+    - More cross-checks for META data
+    - Upped copyright to 2011
+
 0.15	Tue 16 Mar 2010
 
     - Added Test::NoWarnings

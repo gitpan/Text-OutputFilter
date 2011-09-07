@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# Copyright PROCURA B.V. (c) 2006-2010 H.Merijn Brand
+# Copyright PROCURA B.V. (c) 2006-2011 H.Merijn Brand
 
 require 5.008;
 use strict;
@@ -8,7 +8,7 @@ use strict;
 use ExtUtils::MakeMaker;
 
 my %wm = (
-    NAME         => "Text::OutputFilter",
+    NAME         => "Text-OutputFilter",
     ABSTRACT     => "Filter and modify output",
     AUTHOR       => "H.Merijn Brand <h.m.brand\@xs4all.nl>",
     LICENSE	 => "perl",
@@ -53,7 +53,10 @@ sub postamble
 	'leaktest:',
 	q{	sandbox/leaktest $(FULLPERLRUN) "test_harness($(TEST_VERBOSE), '$(INST_LIB)', '$(INST_ARCHLIB)')" $(TEST_FILES)},
 	'',
-	'checkmeta:',
+	'spellcheck:',
+	'	pod-spell-check --aspell',
+	'',
+	'checkmeta:	spellcheck',
 	'	perl sandbox/genMETA.pl -c',
 	'',
 	'fixmeta:	distmeta',
