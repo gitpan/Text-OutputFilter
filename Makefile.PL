@@ -1,6 +1,6 @@
 #!/usr/bin/perl
 
-# Copyright PROCURA B.V. (c) 2006-2011 H.Merijn Brand
+# Copyright PROCURA B.V. (c) 2006-2014 H.Merijn Brand
 
 require 5.008;
 use strict;
@@ -14,11 +14,12 @@ my %wm = (
     AUTHOR       => "H.Merijn Brand <h.m.brand\@xs4all.nl>",
     LICENSE	 => "perl",
     VERSION_FROM => "OutputFilter.pm",
-    PREREQ_PM	 => {
-	"Carp"			=> 0,
-	"Test::More"		=> 0,
-	"Test::NoWarnings"	=> 0,
-	},
+    PREREQ_PM	 => { "Carp"			=> 0,
+		      "Test::More"		=> 0,
+		      "Test::NoWarnings"	=> 0,
+		      },
+    macro        => { TARFLAGS => "--format=ustar -c -v -f",
+		      },
     );
 
 my $rv = WriteMakefile (%wm);
@@ -62,7 +63,6 @@ sub postamble
 	'',
 	'fixmeta:	distmeta',
 	'	perl sandbox/genMETA.pl',
-	'	ls -l */META.yml',
 	'',
 	'tgzdist:	checkmeta fixmeta $(DISTVNAME).tar.gz distcheck',
 	'	-@mv -f $(DISTVNAME).tar.gz $(DISTVNAME).tgz',
